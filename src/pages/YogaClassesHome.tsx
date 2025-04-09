@@ -13,7 +13,7 @@ import GetInTouch from "../components/ContactUs/GetInTouch"
 
 const YogaClassesHome = () => {
 
-  const [page,SetPage] = useState(true);
+  const page = true;
   const {city} = useParams();
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);

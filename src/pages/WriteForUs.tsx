@@ -1,6 +1,6 @@
 
-import SignIn from '../components/Auth/SignIn'
-import SignUp from '../components/Auth/SignUp'
+// import SignIn from '../components/Auth/SignIn'
+// import SignUp from '../components/Auth/SignUp'
 import Navbar from '../components/Navbar'
 import ContentSlide from '../components/OnlineYogaClasses.tsx/ContentSlide'
 import { Guidelines } from '../assets/ClientInfo'
