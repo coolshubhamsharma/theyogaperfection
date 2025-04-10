@@ -9,6 +9,7 @@ import CommunitySection from "../components/CommunitySection"
 import BlogCard from "../components/BlogCard"
 import Footer from "../components/Footer"
 import { blogs } from "../assets/ClientInfo"
+import WhatsApp from "../components/Whatsapp/WhatsApp"
 // import { useState, useEffect } from "react";
 
 
@@ -34,6 +35,8 @@ const Home = () => {
       </div>   */}
       
       <Navbar/>
+
+      <WhatsApp/>
 
         <Carousel/>
 

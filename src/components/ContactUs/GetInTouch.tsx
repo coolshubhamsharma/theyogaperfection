@@ -1,6 +1,13 @@
 
+import { useForm, ValidationError } from '@formspree/react';  
 
 const GetInTouch = () => {
+
+  const [state, handleSubmit] = useForm("xeoavzpn");
+  if (state.succeeded) {
+      return <p>"</p>;
+  }
+
   return (
     <div>
         <div className="flex justify-between m-[8vw] mt-8">
@@ -9,27 +16,51 @@ const GetInTouch = () => {
         </div>
 
         <div className="card shadow-lg w-[40vw] bg-white">
-          <h1 className=" mt-5 text-3xl font-semibold ml-5 text-[#132c4cf7]">Get In Touch</h1>
-          <form action="" className=" ml-6 mt-10">
+          <h1 className=" mt-3 text-3xl font-semibold ml-5 text-[#132c4cf7]">Get In Touch</h1>
+          <form onSubmit={handleSubmit} action="https://formspree.io/f/xeoavzpn" method='POST' className=" ml-6 mt-2">
             <fieldset className="fieldset">
-              <legend className="fieldset-legend text-lg text-gray-800">Your Name </legend>
-              <input type="text" className="input" placeholder="Name" />
+              <label htmlFor='name' className="fieldset-legend text-lg text-gray-800">Your Name </label>
+              <input type="text" className="input" placeholder="Name" id='name' name='name'/>
+              <ValidationError 
+              prefix="Name" 
+              field="name"
+              errors={state.errors}
+              />
             </fieldset>
 
-            <fieldset className="fieldset mt-2">
-              <legend className="fieldset-legend text-lg text-gray-800">Your Email </legend>
-              <input type="email" className="input" placeholder="Email" />
+            <fieldset className="fieldset mt-1">
+              <label htmlFor='email' className="fieldset-legend text-lg text-gray-800">Your Email </label>
+              <input type="email" id='email' name='email' className="input" placeholder="Email" />
+              <ValidationError 
+              prefix="Email" 
+              field="email"
+              errors={state.errors}
+              />
             </fieldset>
 
-            <fieldset className="fieldset mt-2">
-              <legend className="fieldset-legend text-lg text-gray-800">Subject </legend>
-              <input type="text" className="input" placeholder="Type here" />
+            <fieldset className="fieldset mt-1">
+              <label htmlFor='subject' className="fieldset-legend text-lg text-gray-800">Subject </label>
+              <input type="text" id='subject' className="input" name='subject' placeholder="Type here" />
+              <ValidationError 
+              prefix="Subject" 
+              field="subject"
+              errors={state.errors}
+              />
             </fieldset>
 
-            <fieldset className="fieldset mt-2">
-              <legend className="fieldset-legend text-lg text-gray-800">Your Message </legend>
-              <textarea className="input h-[30vh]" placeholder="Type here" />
+            <fieldset className="fieldset mt-1">
+              <label htmlFor='message' className="fieldset-legend text-lg text-gray-800">Your Message </label>
+              <textarea id='message' name='message' className="input h-[30vh]" placeholder="Type here" />
+              <ValidationError 
+              prefix="Message" 
+              field="message"
+              errors={state.errors}
+              />
             </fieldset>
+
+            <button className='btn hover:bg-black hover:text-white' type="submit" disabled={state.submitting}>
+              Submit
+            </button>
           </form>
         </div>        
       </div>

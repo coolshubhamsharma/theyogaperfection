@@ -8,11 +8,14 @@ import { blogs } from '../assets/ClientInfo';
 import BlogMiddleComponent from '../components/Blog/BlogMiddleComponent';
 import BlogPageComponent1 from '../components/Blog/BlogPageComponent1';
 import Section2Component from '../components/Blog/Section 2/Section2Component';
+import WhatsApp from '../components/Whatsapp/WhatsApp';
 
 const Blog = () => {
   return (
     <div className='overflow-x-hidden' >
       <Navbar/>
+
+      <WhatsApp/>
 
       {/* section 1 */}
       <div className='flex justify-between ml-8 mr-7 mb-10'>

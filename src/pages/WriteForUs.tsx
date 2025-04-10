@@ -6,12 +6,15 @@ import ContentSlide from '../components/OnlineYogaClasses.tsx/ContentSlide'
 import { Guidelines } from '../assets/ClientInfo'
 import CommunitySection from '../components/CommunitySection'
 import Footer from '../components/Footer'
+import WhatsApp from '../components/Whatsapp/WhatsApp'
 
 
 const WriteForUs = () => {
   return (
     <div className='overflow-x-hidden'>
       <Navbar/>
+
+      <WhatsApp/>
 
       <h1 className='text-[#132c4cf7] font-serif text-4xl font-semibold ml-[8vw] mt-10'>Contribute To The Yoga Perfection</h1>
 

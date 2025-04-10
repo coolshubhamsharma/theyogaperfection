@@ -4,6 +4,7 @@ import ContactUsSection from "../components/ContactUs/ContactUsSection"
 import GetInTouch from "../components/ContactUs/GetInTouch"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
+import WhatsApp from "../components/Whatsapp/WhatsApp"
 import YogaIcon from "../components/YogaIcon"
 
 
@@ -12,6 +13,8 @@ const ContactUs = () => {
     <div className='overflow-x-hidden '>
 
       <Navbar/>
+
+      <WhatsApp/>
 
       <div>
         <YogaIcon/>

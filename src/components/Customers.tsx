@@ -22,11 +22,11 @@ const Customers = (props:Customer) => {
 
       {/* User Info */}
       <div className="flex items-center mt-6">
-        <img
+        {/* <img
           src="https://via.placeholder.com/50"
           alt="User"
           className="w-12 h-12 rounded-full object-cover"
-        />
+        /> */}
         <div className="ml-4">
           <h3 className="text-lg font-semibold text-gray-800">{props.Name}</h3>
           <p className="text-gray-500 text-sm">

@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom"
 import { Qa } from "../assets/ClientInfo"
 import Question from "../components/OnlineYogaClasses.tsx/Question"
 import GetInTouch from "../components/ContactUs/GetInTouch"
+import WhatsApp from "../components/Whatsapp/WhatsApp"
 
 
 const YogaClassesHome = () => {
@@ -31,6 +32,8 @@ const YogaClassesHome = () => {
         <div>
             <Navbar/>
         </div>
+
+        <WhatsApp/>
         
         {/* section 1 */}
         <div className="ml-[12vw] mr-[12vw]">

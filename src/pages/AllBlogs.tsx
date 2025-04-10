@@ -4,6 +4,7 @@ import CommunitySection from "../components/CommunitySection"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import { blogs } from "../assets/ClientInfo"
+import WhatsApp from "../components/Whatsapp/WhatsApp"
 
 
 const AllBlogs = () => {
@@ -13,6 +14,8 @@ const AllBlogs = () => {
   return (
     <div className="overflow-x-hidden">
         <Navbar/>
+
+        <WhatsApp/>
 
         <h1 className='mt-20 mb-20 text-3xl font-serif tracking-[0.3em] text-center font-bold'>ALL CONTENT</h1> 
 

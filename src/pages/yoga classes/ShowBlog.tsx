@@ -10,6 +10,7 @@ import CommunitySection from "../../components/CommunitySection";
 import Footer from "../../components/Footer";
 import { useLocation } from "react-router-dom";
 import { blogs } from "../../assets/ClientInfo";
+import WhatsApp from "../../components/Whatsapp/WhatsApp";
 
 
 const ShowBlog = () => {
@@ -45,6 +46,8 @@ const ShowBlog = () => {
     <div className="overflow-x-hidden">
         
         <Navbar/>
+
+        <WhatsApp/>
 
         {/* section 1 */}
         <div className="mt-6 flex justify-between ml-[10vw] mr-[10vw]">

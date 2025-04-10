@@ -7,6 +7,7 @@ import OnlineYoga from "../components/OnlineYogaClasses.tsx/OnlineYoga"
 import OfflineYoga from "../components/About/OfflineYoga"
 import OtherPrograms from "../components/About/OtherPrograms"
 import CallOutSection2 from "../components/About/CallOutSection2"
+import WhatsApp from "../components/Whatsapp/WhatsApp"
 
 // bg-amber-50
 const AboutUs = () => {
@@ -15,6 +16,8 @@ const AboutUs = () => {
       <div>
         <Navbar/>
       </div>
+
+      <WhatsApp/>
 
       <div className="mt-[16vh]">
         <div className="text-center flex-col" >

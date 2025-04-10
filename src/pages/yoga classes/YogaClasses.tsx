@@ -4,6 +4,7 @@ import { PytAtHome , CityColors} from "../../assets/ClientInfo"
 import ContentSlide from "../../components/OnlineYogaClasses.tsx/ContentSlide"
 import CommunitySection from "../../components/CommunitySection"
 import Footer from "../../components/Footer"
+import WhatsApp from "../../components/Whatsapp/WhatsApp"
 
 
 
@@ -14,6 +15,8 @@ const YogaClasses = () => {
     <div className="overflow-x-hidden">
 
       <Navbar/>
+
+      <WhatsApp/>
 
       <div className="ml-[12vw] mr-[12vw]">
         <h1 className="text-4xl font-serif font-bold mt-20 text-[#132c4cf7] text-center">Introducing  Yoga Classes At Home In India</h1>
