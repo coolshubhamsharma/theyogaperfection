@@ -3,7 +3,7 @@ import Home from "./pages/Home"
 import AboutUs from "./pages/AboutUs"
 import Blog from "./pages/Blog"
 import ContactUs from "./pages/ContactUs"
-import WriteForUs from "./pages/WriteForUs"
+// import WriteForUs from "./pages/WriteForUs"
 import AllBlogs from "./pages/AllBlogs"
 import YogaClasses from "./pages/yoga classes/YogaClasses"
 import YogaClassesHome from "./pages/YogaClassesHome"
@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/about-us"  element={<AboutUs/>} />
           <Route path="/blog"  element={<Blog/>} />
           <Route path="/contact-us"  element={<ContactUs/>} />
-          <Route path="/write-for-us"  element={<WriteForUs/>} />
+          {/* <Route path="/write-for-us"  element={<WriteForUs/>} /> */}
           <Route path="/allblogs"  element={<AllBlogs/>} />
           <Route path="/yoga-classes"  element={<YogaClasses/>} />
           <Route path="/home-yoga-classes/:city"  element={<YogaClassesHome/>} />
