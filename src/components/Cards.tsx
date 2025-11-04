@@ -5,7 +5,7 @@ import { TbStretching } from "react-icons/tb";
 const Cards = () => {
   return (
     <div className="flex flex-wrap justify-between mb-[20vh]">
-        <div className="card card-border bg-base-100 max-w-96 shadow-lg mt-2">
+        <div className="card card-border bg-base-100 md:max-w-96 max-w-45 shadow-lg mt-2">
             <div className="card-body items-center">
                 <GiMeditation className="size-[150px] text-purple-700 hover:text-black hover:cursor-pointer" />    
                 <h2 className="card-title">Clear, Calm, Happy</h2>
@@ -13,7 +13,7 @@ const Cards = () => {
             </div>
         </div>
 
-        <div className="card card-border bg-base-100 w-96 shadow-lg mt-2">
+        <div className="card card-border bg-base-100 md:max-w-96 max-w-45 shadow-lg mt-2">
             <div className="card-body items-center">
                 <GrYoga className="size-[150px] text-purple-700 hover:text-black hover:cursor-pointer" />
                 <h2 className="card-title">Yoga to Ease into Your Day</h2>
@@ -21,7 +21,7 @@ const Cards = () => {
             </div>
         </div>
 
-        <div className="card card-border bg-base-100 w-96 shadow-lg mt-2">
+        <div className="card card-border bg-base-100 md:max-w-96 max-w-45 shadow-lg mt-2">
             <div className="card-body items-center">
                 <TbStretching className="size-[150px] text-purple-700 hover:text-black hover:cursor-pointer" />
                 <h2 className="card-title">Move with Tenderness</h2>

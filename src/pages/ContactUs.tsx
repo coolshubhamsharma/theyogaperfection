@@ -1,4 +1,5 @@
 
+import { HelmetData } from "react-helmet-async"
 import CommunitySection from "../components/CommunitySection"
 import ContactUsSection from "../components/ContactUs/ContactUsSection"
 import GetInTouch from "../components/ContactUs/GetInTouch"
@@ -6,22 +7,60 @@ import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import WhatsApp from "../components/Whatsapp/WhatsApp"
 import YogaIcon from "../components/YogaIcon"
+import { Helmet } from "react-helmet-async"
 
 
 const ContactUs = () => {
   return (
+    <>
+
+    <Helmet>
+      <title>Contact Us | The Yoga Perfection</title>
+      <meta
+        name="description"
+        content="Get in touch with The Yoga Perfection for personalized yoga classes, corporate sessions, or home training. Reach us for expert guidance and wellness support."
+      />
+      <meta
+        name="keywords"
+        content="Contact The Yoga Perfection, Yoga Classes Contact, Yoga Instructor, Home Yoga, Corporate Yoga"
+      />
+      <meta property="og:title" content="Contact Us | The Yoga Perfection" />
+      <meta
+        property="og:description"
+        content="Reach out to The Yoga Perfection to book yoga sessions, ask questions, or explore personalized training options."
+      />
+      <meta
+        property="og:image"
+        content="https://images.unsplash.com/photo-1603987835113-841f232f6f70?q=80&w=1464&auto=format&fit=crop"
+      />
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:url"
+        content="https://theyogaperfection.com/contact-us"
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+      <link rel="canonical" href="https://theyogaperfection.com/contact-us" />
+    </Helmet>
+
     <div className='overflow-x-hidden '>
 
       <Navbar/>
 
       <WhatsApp/>
 
-      <div>
-        <YogaIcon/>
-        <h1 className="text-lg font-semibold text-center mt-2 mr-7 text-[#132c4cf7]">Become A Yogi</h1>
-        <h1 className="text-5xl text-center font-bold mt-10 mb-2 text-[#132c4cf7]">Your Path To A Healthy Life Begins Here</h1>
-        <p className="text-center mt-6 text-lg text-gray-700 ml-[8vw] mr-[8vw]">Yoga, an ancient practice from India, has been cultivated for thousands of years. It integrates physical postures, breath control, meditation, and relaxation to enhance overall well-being. Regular practice offers numerous benefits for physical, mental, and emotional health.</p>
+      <div className="text-center mt-10 px-[8vw]">
+        <div className="text-center flex flex-col items-center px-6 py-12">
+          <YogaIcon/>
+        </div>
+        <h1 className="text-lg sm:text-xl font-semibold mt-2 text-[#132c4cf7]">Become A Yogi</h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-6 mb-3 text-[#132c4cf7]">
+          Your Path To A Healthy Life Begins Here
+        </h1>
+        <p className="mt-6 text-base sm:text-lg text-gray-700">
+          Yoga, an ancient practice from India, has been cultivated for thousands of years. It integrates physical postures, breath control, meditation, and relaxation to enhance overall well-being. Regular practice offers numerous benefits for physical, mental, and emotional health.
+        </p>
       </div>
+
 
       <div>
         <ContactUsSection/>
@@ -71,6 +110,7 @@ const ContactUs = () => {
       </div>
 
     </div>
+    </>
 
   )
 }

@@ -1,70 +1,91 @@
-import { GrInstagram } from "react-icons/gr";
-import { GrPinterest } from "react-icons/gr";
+import { GrInstagram, GrPinterest } from "react-icons/gr";
 import { ImFacebook2 } from "react-icons/im";
 import { Link } from "react-router-dom";
 
-
 const Footer = () => {
   return (
-    <div className="h-[50vh] pl-20 pt-5 pr-20 flex flex-col bg-blue-50">
-
-      <div className="flex justify-evenly">
-        <div className="flex flex-col mr-20">
-          <h1 className="text-lg font-semibold font-serif text-[#132c4cf7]">Important Links</h1>
-          <div className="justify-between text-sm flex flex-col font-semibold font-serif cursor-pointer text-[#81B9B9]">
-            <p className="hover:text-[#483D8B] m-1"><Link to="/">Home</Link></p>
-            <p className="hover:text-[#483D8B] m-1"><Link to="/about-us">About Us</Link></p>
-            <p className="hover:text-[#483D8B] m-1"><Link to="/contact-us">Contact Us</Link></p>
-            <p className="hover:text-[#483D8B] m-1"><Link to="/yoga-classes">Yoga Classes</Link></p>
-            <p className="hover:text-[#483D8B] m-1"><Link to="/blog">Blogs</Link></p>
-            <p className="hover:text-[#483D8B] m-1"><Link to="/write-for-us">Write For Us</Link></p>
+    <footer className="w-full bg-blue-50 py-10 px-6 sm:px-10 md:px-20 flex flex-col text-[#132c4cf7]">
+      {/* Top Section */}
+      <div className="flex flex-wrap justify-between gap-10">
+        {/* Important Links */}
+        <div className="flex flex-col min-w-[150px]">
+          <h1 className="text-lg font-semibold font-serif mb-3">Important Links</h1>
+          <div className="flex flex-col text-sm font-semibold font-serif text-[#81B9B9] space-y-2">
+            {[
+              { to: "/", label: "Home" },
+              { to: "/about-us", label: "About Us" },
+              { to: "/contact-us", label: "Contact Us" },
+              { to: "/yoga-classes", label: "Yoga Classes" },
+              { to: "/blog", label: "Blogs" },
+              // { to: "/write-for-us", label: "Write For Us" },
+            ].map((link, i) => (
+              <Link
+                key={i}
+                to={link.to}
+                className="hover:text-[#483D8B] transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
 
-        <div className="flex flex-col mr-20">
-          <h1 className="text-lg font-semibold font-serif text-[#132c4cf7]">Cities</h1>
-          <div className="text-sm flex flex-col font-semibold font-serif cursor-pointer text-[#81B9B9]">
-            <p className="hover:text-[#483D8B] m-1"><Link to="/home-yoga-classes/delhi">Delhi</Link></p>
-            <p className="hover:text-[#483D8B] m-1"><Link to="/home-yoga-classes/gurugram">Gurugram</Link></p>
-            <p className="hover:text-[#483D8B] m-1"><Link to="/home-yoga-classes/noida">Noida</Link></p>
-            <p className="hover:text-[#483D8B] m-1"><Link to="/home-yoga-classes/faridabad">Faridabad</Link></p>            
-            <p className="hover:text-[#483D8B] m-1"><Link to="/home-yoga-classes/gaziyabad">Gaziyabad</Link></p>            
-            <p className="hover:text-[#483D8B] m-1"><Link to="/home-yoga-classes/banglore">Banglore</Link></p>            
-          </div> 
+        {/* Cities */}
+        <div className="flex flex-col min-w-[150px]">
+          <h1 className="text-lg font-semibold font-serif mb-3">Cities</h1>
+          <div className="flex flex-col text-sm font-semibold font-serif text-[#81B9B9] space-y-2">
+            {["Delhi", "Gurugram", "Noida", "Faridabad", "Gaziyabad", "Bangalore"].map((city, i) => (
+              <Link
+                key={i}
+                to={`/home-yoga-classes/${city.toLowerCase()}`}
+                className="hover:text-[#483D8B]"
+              >
+                {city}
+              </Link>
+            ))}
+          </div>
         </div>
 
-        <div className="flex flex-col mr-20">
-          <h1 className="text-lg font-semibold font-serif text-[#132c4cf7]">Services</h1>
-          <div className="text-sm flex flex-col font-semibold font-serif cursor-pointer text-[#81B9B9]">
-            <p className="hover:text-[#483D8B] m-1">Online Yoga Classes</p>
-            <p className="hover:text-[#483D8B] m-1"><Link to="/yoga-classes">Home Yoga Classes</Link></p>
-            <p className="hover:text-[#483D8B] m-1">Prenatal Yoga Classes</p>
-            <p className="hover:text-[#483D8B] m-1">Corporate Yoga Classes</p>
-            <p className="hover:text-[#483D8B] m-1">Group Yoga Classes</p>            
-          </div> 
+        {/* Services */}
+        <div className="flex flex-col min-w-[150px]">
+          <h1 className="text-lg font-semibold font-serif mb-3">Services</h1>
+          <div className="flex flex-col text-sm font-semibold font-serif text-[#81B9B9] space-y-2">
+            <p className="hover:text-[#483D8B]">Online Yoga Classes</p>
+            <Link to="/yoga-classes" className="hover:text-[#483D8B]">
+              Home Yoga Classes
+            </Link>
+            <p className="hover:text-[#483D8B]">Prenatal Yoga Classes</p>
+            <p className="hover:text-[#483D8B]">Corporate Yoga Classes</p>
+            <p className="hover:text-[#483D8B]">Group Yoga Classes</p>
+          </div>
         </div>
-        
-        <div className="flex flex-col mr-20 w-[15vw]">
-          <h1 className="text-lg font-semibold font-serif text-[#132c4cf7]">Visit Us</h1>
-          <h1 className="text-lg font-semibold font-serif text-[#81B9B9]">Head Office :- Sector - 24 , Rohini , Delhi</h1>
-          
+
+        {/* Visit Us */}
+        <div className="flex flex-col max-w-sm">
+          <h1 className="text-lg font-semibold font-serif mb-3">Visit Us</h1>
+          <p className="text-sm font-semibold font-serif text-[#81B9B9]">
+            Head Office: Sector - 24, Rohini, Delhi
+          </p>
         </div>
       </div>
 
-      <div className="flex justify-between mt-8">
-        <div>
-          <h1 className="text-sm">Copyright © The Yoga Perfection</h1>
-          <h1 className="text-sm">Developed by :- <span className="text-purple-700 font-semibold">Vayunautix</span></h1>
+      {/* Bottom Section */}
+      <div className="flex flex-col sm:flex-row justify-between items-center mt-10 border-t border-gray-200 pt-5 text-center sm:text-left">
+        <div className="mb-4 sm:mb-0">
+          <p className="text-sm">Copyright © The Yoga Perfection</p>
+          <p className="text-sm">
+            Developed by: <span className="text-purple-700 font-semibold">Vayunautix</span>
+          </p>
         </div>
-        <div className="flex justify-between mr-[18vw]">
-            <GrInstagram className="mr-6 text-3xl hover:cursor-pointer"/>
-            <GrPinterest className="mr-6 text-3xl text-red-600 hover:cursor-pointer"/>
-            <ImFacebook2 className="text-3xl hover:cursor-pointer text-blue-600"/>
+
+        <div className="flex gap-5 text-3xl">
+          <GrInstagram className="hover:text-pink-600 cursor-pointer" />
+          <GrPinterest className="text-red-600 hover:text-red-700 cursor-pointer" />
+          <ImFacebook2 className="text-blue-600 hover:text-blue-700 cursor-pointer" />
         </div>
       </div>
-        
-    </div>
-  )
-}
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

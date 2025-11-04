@@ -42,10 +42,20 @@ const Section2Component = (props:prop) => {
     };
   
   return (
-    <div className='flex flex-col w-[18vw] mt-10'>
-          <img onClick={handleClick} className='rounded-full border h-[15vh] w-[15vh] text-center mr-[5vw] ml-[5vw] cursor-pointer' src={props.Image} alt="" />
-          <h1 onClick={handleClick} className='text-sm font-bold text-center hover:text-[#999285] cursor-pointer'>{props.Title}</h1>
-        </div>
+    <div className="flex flex-col items-center text-center max-w-[250px] lg:max-w-[200px]">
+      <img
+        onClick={handleClick}
+        className="rounded-full border-2 border-gray-300 h-[15vh] w-[15vh] md:h-[18vh] md:w-[18vh] object-cover cursor-pointer transition-transform hover:scale-105"
+        src={props.Image}
+        alt={props.Title}
+      />
+      <h1
+        onClick={handleClick}
+        className="text-sm md:text-base font-semibold mt-3 hover:text-[#999285] cursor-pointer leading-snug"
+      >
+        {props.Title}
+      </h1>
+    </div>
   )
 }
 

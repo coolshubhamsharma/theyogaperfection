@@ -5,13 +5,36 @@ import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import { blogs } from "../assets/ClientInfo"
 import WhatsApp from "../components/Whatsapp/WhatsApp"
+import { Helmet } from "react-helmet-async"
 
 
 const AllBlogs = () => {
 
   const [menu , setMenu] = useState("All");
+  const title = "All Blogs";
+  const category = "The Yoga Perfection";
+  const description =
+    "Explore all yoga, meditation, spirituality, and wellness blogs from The Yoga Perfection. Find expert insights, holistic tips, and guides to help you lead a balanced and mindful life.";
+  const image = "https://images.unsplash.com/photo-1696885233997-6148140ea69a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1374";
 
   return (
+    <>
+
+    <Helmet>
+        <title>{title} | {category}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content="Yoga blogs, Meditation, Spirituality, Ayurveda, Health and Nutrition, Fitness, Lifestyle, The Yoga Perfection" />
+        <meta property="og:title" content={`${title} | ${category}`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://theyogaperfection.com/allblogs" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${title} | ${category}`} />
+        <meta name="twitter:description" content={description} />
+        <link rel="canonical" href="https://theyogaperfection.com/allblogs" />
+      </Helmet>
+
     <div className="overflow-x-hidden">
         <Navbar/>
 
@@ -19,16 +42,31 @@ const AllBlogs = () => {
 
         <h1 className='mt-20 mb-20 text-3xl font-serif tracking-[0.3em] text-center font-bold'>ALL CONTENT</h1> 
 
-        <div className='flex justify-center gap-6 my-10 mb-[10vh] text-lg'>
-            <button onClick={()=>setMenu('All')} className={menu === 'All'?`bg-black text-white py-1 px-4 rounded-sm`:""}>All</button>
-            <button onClick={()=>setMenu('Yoga')} className={menu === "Yoga"?`bg-black text-white py-1 px-4 rounded-sm`:""}>Yoga</button>
-            <button onClick={()=>setMenu('Meditation')} className={menu === "Meditation"?`bg-black text-white py-1 px-4 rounded-sm`:""}>Meditation</button>
-            <button onClick={()=>setMenu('Spirituality')} className={menu === "Spirituality"?`bg-black text-white py-1 px-4 rounded-sm`:""}>Spirituality</button>
-            <button onClick={()=>setMenu('Ayurveda')} className={menu === "Ayurveda"?`bg-black text-white py-1 px-4 rounded-sm`:""}>Ayurveda</button>
-            <button onClick={()=>setMenu('Health')} className={menu === "Health"?`bg-black text-white py-1 px-4 rounded-sm`:""}>Health & Nutrition</button>
-            <button onClick={()=>setMenu('Fitness')} className={menu === "Fitness"?`bg-black text-white py-1 px-4 rounded-sm`:""}>Fitness</button>
-            <button onClick={()=>setMenu('Lifestyle')} className={menu === "Lifestyle"?`bg-black text-white py-1 px-4 rounded-sm`:""}>Lifestyle</button>
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 my-8 mb-[10vh] text-base sm:text-lg px-4">
+          {[
+            "All",
+            "Yoga",
+            "Meditation",
+            "Spirituality",
+            "Ayurveda",
+            "Health & Nutrition",
+            "Fitness",
+            "Lifestyle",
+          ].map((item) => (
+            <button
+              key={item}
+              onClick={() => setMenu(item)}
+              className={`py-1 px-4 rounded-sm font-medium transition-all duration-300 ${
+                menu === item
+                  ? "bg-black text-white"
+                  : "text-gray-800 hover:text-black hover:bg-gray-100"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
         </div>
+
 
         
           {blogs.filter((blog)=> menu === "All" ? true : blog.category === menu).map((blog , index)=>{ {/*the filter method is returning the  */}
@@ -40,6 +78,7 @@ const AllBlogs = () => {
         <CommunitySection/>
         <Footer/>
     </div>
+    </>
   )
 }
 

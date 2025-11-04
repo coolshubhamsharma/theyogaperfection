@@ -1,73 +1,69 @@
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
 
 const RateCards = () => {
+  const plans = [
+    {
+      title: "PER SESSION",
+      price: "Starts From @600 (flexible)",
+      points: ["Paid Demo", "1 Hour Session", "Experienced Trainer", "Premium Services"],
+    },
+    {
+      title: "3 DAYS IN A WEEK",
+      price: "Starts From @6000 (flexible)",
+      points: [
+        "500rs for demo (adjustable in monthly charges)",
+        "1 Hour Session",
+        "Every alternative day",
+        "12 sessions in a month",
+      ],
+    },
+    {
+      title: "5 DAYS IN A WEEK",
+      price: "Starts From @9000 (flexible)",
+      points: [
+        "500rs for demo (adjustable in monthly charges)",
+        "1 Hour Session",
+        "Monday to Friday",
+        "20 sessions in a month",
+      ],
+    },
+  ];
+
   return (
-    <div className="mt-2 flex justify-between mb-5">
-        <div className="card shadow-lg h-[65vh] w-[27vw] flex flex-col p-5 mt-5 mb-10">
-            <div className="flex flex-col justify-between mb-5">
-              <h1 className="text-2xl font-serif font-bold tracking-wider text-left mt-5 text-[#A33D3D]">PER SESSION </h1>
-              <h1 className="text-md font-serif text-left mt-7 font-semibold text-[#81B9B9]">Starts From @600</h1>
-              <hr className="mt-7" />
-            </div>
-            <div className="flex flex-1 flex-col justify-evenly ">
-              <div className="ml-10 flex flex-col justify-between h-[20vh]">
-                <ul className="list-disc">
-                  <li>Paid Demo</li>
-                  <li>1 Hour Session</li>
-                  <li>Experienced Trainer</li>
-                  <li>Premium Services</li>
-                </ul>
-              </div>
-              <div className="flex justify-center mt-5 flex-1">
-                <button className="btn w-[20vw] font-serif font-semibold bg-[#F8F6EF] text-[#81B9B9] hover:text-white hover:bg-[#81B9B9] tracking-wider"><Link to="https://whatsform.com/fdVCNE">BOOK NOW</Link></button>
-              </div>
-            </div>
-        </div>
+    <div className="mt-2 mb-10 flex flex-wrap justify-center gap-5">
+      {plans.map((plan, index) => (
+        <div
+          key={index}
+          className="card shadow-lg bg-white w-[80vw] sm:w-[45vw] lg:w-[25vw] p-6 flex flex-col justify-between rounded-xl transition-transform duration-300 hover:scale-105"
+        >
+          <div>
+            <h1 className="text-2xl font-serif font-bold tracking-wider text-left mt-2 text-[#A33D3D]">
+              {plan.title}
+            </h1>
+            <h1 className="text-md font-serif text-left mt-4 font-semibold text-[#81B9B9]">
+              {plan.price}
+            </h1>
+            <hr className="mt-5" />
+          </div>
 
-        <div className="card shadow-lg h-[65vh] w-[27vw] flex flex-col p-5 mt-5 mb-10">
-            <div className="flex flex-col justify-between mb-5">
-              <h1 className="text-2xl font-serif font-bold tracking-wider text-left mt-5 text-[#A33D3D]">3 DAYS IN A WEEK </h1>
-              <h1 className="text-md font-serif text-left mt-7 font-semibold text-[#81B9B9]">Starts From @6000</h1>
-              <hr className="mt-7" />
-            </div>
-            <div className="flex flex-1 flex-col justify-evenly">
-              <div className="ml-10 flex flex-col justify-between h-[20vh]">
-                <ul className="list-disc">
-                  <li>500rs for demo ( this amount will adjust in your monthly charges)</li>
-                  <li>1 Hour Session</li>
-                  <li>Every alternative day</li>
-                  <li>12 sessions in a month</li>
-                </ul>
-              </div>
-              <div className="flex justify-center mt-5 flex-1">
-                <button className="btn w-[20vw] font-serif font-semibold bg-[#F8F6EF] text-[#81B9B9] hover:text-white hover:bg-[#81B9B9] tracking-wider"><Link to="https://whatsform.com/fdVCNE">BOOK NOW</Link></button>
-              </div>
-            </div>
-        </div>
+          <ul className="list-disc ml-5 mt-6 space-y-2 text-gray-700">
+            {plan.points.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
 
-        <div className="card shadow-lg h-[65vh] w-[27vw] flex flex-col p-5 mt-5 mb-10">
-            <div className="flex flex-col justify-between mb-5">
-              <h1 className="text-2xl font-serif font-bold tracking-wider text-left mt-5 text-[#A33D3D]">5 DAYS IN A WEEK </h1>
-              <h1 className="text-md font-serif text-left mt-7 font-semibold text-[#81B9B9]">Starts From @9000</h1>
-              <hr className="mt-7" />
-            </div>
-            <div className="flex flex-1 flex-col justify-evenly">
-              <div className="ml-10 flex flex-col justify-between h-[20vh]">
-                <ul className="list-disc">
-                  <li>500rs for demo ( this amount will adjust in your monthly charges)</li>
-                  <li>1 Hour Session</li>
-                  <li>Monday to Friday</li>
-                  <li>20 sessions in a month</li>
-                </ul>
-              </div>
-              <div className="flex justify-center mt-5 flex-1">
-                <button className="btn w-[20vw] font-serif font-semibold bg-[#F8F6EF] text-[#81B9B9] hover:text-white hover:bg-[#81B9B9] tracking-wider"><Link to="https://whatsform.com/fdVCNE">BOOK NOW</Link></button>
-              </div>
-            </div>
+          <div className="flex justify-center mt-8">
+            <Link
+              to="https://whatsform.com/fdVCNE"
+              className="btn w-full sm:w-[60%] font-serif font-semibold bg-[#F8F6EF] text-[#81B9B9] hover:text-white hover:bg-[#81B9B9] tracking-wider py-2 rounded-md text-center"
+            >
+              BOOK NOW
+            </Link>
+          </div>
         </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default RateCards
+export default RateCards;
