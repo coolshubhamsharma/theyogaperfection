@@ -10,7 +10,7 @@ import BlogCard from "../components/BlogCard"
 import Footer from "../components/Footer"
 import { blogs } from "../assets/ClientInfo"
 import WhatsApp from "../components/Whatsapp/WhatsApp"
-import { Helmet } from "react-helmet-async"
+import {Helmet} from "react-helmet"
 // import { useState, useEffect } from "react";
 
 

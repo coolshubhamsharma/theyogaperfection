@@ -9,7 +9,7 @@ import BlogMiddleComponent from '../components/Blog/BlogMiddleComponent';
 import BlogPageComponent1 from '../components/Blog/BlogPageComponent1';
 import Section2Component from '../components/Blog/Section 2/Section2Component';
 import WhatsApp from '../components/Whatsapp/WhatsApp';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 const Blog = () => {
   return (

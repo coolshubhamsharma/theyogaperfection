@@ -5,7 +5,7 @@ import ContentSlide from "../../components/OnlineYogaClasses.tsx/ContentSlide"
 import CommunitySection from "../../components/CommunitySection"
 import Footer from "../../components/Footer"
 import WhatsApp from "../../components/Whatsapp/WhatsApp"
-import { Helmet } from "react-helmet-async"
+import { Helmet } from "react-helmet"
 
 
 

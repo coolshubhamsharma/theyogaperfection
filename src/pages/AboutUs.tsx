@@ -8,7 +8,7 @@ import OfflineYoga from "../components/About/OfflineYoga"
 import OtherPrograms from "../components/About/OtherPrograms"
 import CallOutSection2 from "../components/About/CallOutSection2"
 import WhatsApp from "../components/Whatsapp/WhatsApp"
-import { Helmet } from "react-helmet-async" 
+import { Helmet } from "react-helmet" 
 
 // bg-amber-50
 const AboutUs = () => {

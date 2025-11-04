@@ -1,5 +1,4 @@
 
-import { HelmetData } from "react-helmet-async"
 import CommunitySection from "../components/CommunitySection"
 import ContactUsSection from "../components/ContactUs/ContactUsSection"
 import GetInTouch from "../components/ContactUs/GetInTouch"
@@ -7,7 +6,7 @@ import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import WhatsApp from "../components/Whatsapp/WhatsApp"
 import YogaIcon from "../components/YogaIcon"
-import { Helmet } from "react-helmet-async"
+import { Helmet } from "react-helmet"
 
 
 const ContactUs = () => {

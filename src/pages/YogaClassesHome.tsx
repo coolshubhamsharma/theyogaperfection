@@ -10,7 +10,7 @@ import { Qa } from "../assets/ClientInfo"
 import Question from "../components/OnlineYogaClasses.tsx/Question"
 import GetInTouch from "../components/ContactUs/GetInTouch"
 import WhatsApp from "../components/Whatsapp/WhatsApp"
-import { Helmet } from "react-helmet-async"
+import { Helmet } from "react-helmet"
 
 
 const YogaClassesHome = () => {

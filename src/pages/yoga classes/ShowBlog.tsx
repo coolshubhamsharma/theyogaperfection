@@ -11,7 +11,7 @@ import Footer from "../../components/Footer";
 import { useLocation } from "react-router-dom";
 import { blogs } from "../../assets/ClientInfo";
 import WhatsApp from "../../components/Whatsapp/WhatsApp";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 
 const ShowBlog = () => {
