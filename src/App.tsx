@@ -9,6 +9,7 @@ import YogaClasses from "./pages/yoga classes/YogaClasses"
 import YogaClassesHome from "./pages/YogaClassesHome"
 import ShowBlog from "./pages/yoga classes/ShowBlog"
 import ScrollTop from "./components/Whatsapp/ScrollTop"
+import { Analytics } from '@vercel/analytics/react';
 // import Admin from "./pages/Admin"
 
 
@@ -29,6 +30,8 @@ const App = () => {
           <Route path="/showblog"  element={<ShowBlog/>} />
           {/* <Route path="/admin"  element={<Admin/>} /> */}
         </Routes>
+
+        <Analytics />
       
     </div>
   )
